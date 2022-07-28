@@ -1,0 +1,78 @@
+@import './variables';
+
+
+.AddTaskForm{
+    max-width: 800px;
+    min-width: 300px;
+    padding:0;
+    margin: auto;
+    text-align: center;
+    background-color: #fefefe;
+
+    &__title{
+        background-color: #ebe6e681;
+        padding-block: 10px;
+       
+    }
+
+    & p{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+    }
+
+    &__content{
+        @include flex(column,nowrap);
+        gap: 20px;
+        padding-block: 20px;
+        border: 1px #ebe6e6 solid;
+
+        
+        & button{
+            min-width: 100px;
+            max-width: 20%;
+            height: 3vh;
+            background-image: linear-gradient(to right, #485563 0%, #29323c  51%, #485563  100%);
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+            box-shadow: 0 0 20px #eee;
+            border: none;
+            cursor: pointer;
+            
+
+            & button:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+            
+            }
+        
+    }
+        
+    }
+
+    & h2{
+        font-size: 30px;
+    }
+
+    & input{
+        width: 70%;
+        height: 3vh;
+        text-align: center;
+        border: 2px solid #ebe6e6fd;
+    }
+
+    &__display{
+        @include flex(row,nowrap);
+        gap: 20px;
+
+        & img{
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+    }
+
+}
+
